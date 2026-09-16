@@ -14,8 +14,8 @@
   "scripts": {
     "prepare": "git config core.hooksPath .githooks || true"
   },
-  "dependencies": {
-    "@introspection-ai/recipes": "^0.25.1"
+  "peerDependencies": {
+    "@introspection-ai/recipes": "*"
   },
   "pi": {
     "agents": [
