@@ -1,7 +1,7 @@
 {
-  "name": "{{ slug }}",
+  "name": "@introspection-recipes/coding-agent",
   "version": "0.1.1",
-  "description": "{{ description }}",
+  "description": "A starting point for your coding agent.",
   "keywords": [
     "pi-package",
     "pi-coding-agent",

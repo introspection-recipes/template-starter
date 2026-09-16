@@ -1,0 +1,35 @@
+# The seeding contract for this template.
+#
+# This repository stays a VALID, WORKING recipe — `recipe check` runs on it,
+# people clone it directly, and `introspection init` uses it. That rules out
+# placeholders in the files: `{slug}` is not a legal Runtime slug, a manifest
+# named `{slug}.yaml` fails validation, and `package-lock.json` cannot be
+# regenerated to match a placeholder in `package.json`.
+#
+# So the contract names the literal tokens to replace instead. Seeding a hosted
+# repository rewrites these exact strings — in file contents and in paths — to
+# the new Runtime's identity. Nothing else is touched, so a `{placeholder}`
+# written deliberately in a prompt survives verbatim.
+#
+# Deliberately not under `.introspection/`: the checker globs
+# `.introspection/*.yaml` and validates every file there as a recipe manifest.
+version: 1
+
+substitute:
+  # The Runtime group's identity. Also the manifest FILENAME — the control
+  # plane derives the slug from `.introspection/<slug>.yaml`, not from `name:`
+  # inside it — so this token is replaced in paths as well as contents.
+  slug:
+    token: coding-agent
+    paths: true
+  # Human-readable name, in the manifest's `name:`.
+  name:
+    token: coding-agent
+  # One line describing the agent.
+  description:
+    token: Customizable Pi coding agent
+
+# Files the seeder must regenerate rather than rewrite, because two documents
+# have to agree and a textual substitution would leave them inconsistent.
+regenerate:
+  - package-lock.json
