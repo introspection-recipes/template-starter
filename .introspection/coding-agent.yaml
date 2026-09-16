@@ -1,0 +1,5 @@
+name: coding-agent
+path: .
+description: Customizable Pi coding agent
+runtime:
+  llm_mode: managed
