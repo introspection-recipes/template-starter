@@ -4,8 +4,15 @@
 .pi/mcporter.json
 .introspection/local.json
 
-# Dependencies
+# Dependencies. Recipes install with pnpm, so the other three lockfiles are
+# rejected by `recipes check`; pnpm-lock.yaml is committed once you add one.
 node_modules/
+package-lock.json
+npm-shrinkwrap.json
+yarn.lock
+
+# Local eval results
+eval-runs/
 
 # Secrets. `introspection dev` stages with `git add -A`, so anything untracked
 # and un-ignored here travels to the cloud inside the development patch.
