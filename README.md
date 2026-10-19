@@ -8,7 +8,7 @@ Install Node.js 24 or newer and the Introspection CLI, then create your own reci
 
 ```bash
 npm install -g @introspection-ai/cli
-introspection init coding-agent template-starter
+introspection init coding-agent --template template-starter
 cd coding-agent
 ```
 
