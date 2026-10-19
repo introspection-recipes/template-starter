@@ -4,18 +4,18 @@ A minimal Pi coding agent with repository inspection, shell, and file-editing to
 
 ## Quick start
 
-Install Node.js 24 or newer and the Introspection CLI, then create your own recipe from this template, replacing `<name>` with your recipe's name. `init` also installs the compatible Pi harness and Recipes extension.
+Install Node.js 24 or newer and the Introspection CLI, then create your own recipe from this template. `init` also installs the compatible Pi harness and Recipes extension.
 
 ```bash
 npm install -g @introspection-ai/cli
-introspection init <name> template-starter
-cd <name>
+introspection init coding-agent --template template-starter
+cd coding-agent
 ```
 
 Validate the recipe and start a fresh local Pi session:
 
 ```bash
-introspection local --runtime <name>
+introspection local --runtime coding-agent
 ```
 
 Ask:
@@ -42,14 +42,14 @@ Development requires the recipe's first runtime. Commit the locally proven recip
 
 1. In the Introspection app, open your organization's **Integrations** page and grant the Introspection GitHub App access to the repository.
 2. Open the target project, go to **Runtimes**, and select **New runtime**.
-3. Choose the repository and the runtime in `.introspection/<name>.yaml`, confirm that its recipe path is `.`, and create the first version from `main`.
+3. Choose the repository and the runtime in `.introspection/coding-agent.yaml`, confirm that its recipe path is `.`, and create the first version from `main`.
 4. In **Versions**, confirm that the immutable version's recipe commit matches the `main` commit you intended to deploy.
 
 Once the runtime exists, exercise uncommitted changes through the cloud development path:
 
 ```bash
 introspection login
-introspection dev --runtime <name>
+introspection dev --runtime coding-agent
 ```
 
 Leave the command running, open the development chat URL it prints, and repeat the repository-summary prompt. Saved changes to `SYSTEM.md` or `agents/agent.yaml` are picked up without a commit or push. Stopping `introspection dev` removes the local overlay; it does not deploy a version.
@@ -64,7 +64,7 @@ In the runtime's **Versions** view, find the candidate by branch and commit, pin
 
 After the staging behavior and pull request are approved, merge into the repository's configured production branch. The GitHub integration creates the immutable version and activates it for production; there is no separate promotion command.
 
-Run one small production check through the stable `<name>` runtime and confirm that it resolves to the merged recipe commit.
+Run one small production check through the stable `coding-agent` runtime and confirm that it resolves to the merged recipe commit.
 
 ### 5. Learn and repeat
 
@@ -75,6 +75,6 @@ Use production conversations and recurring patterns to choose the smallest usefu
 - A ready-to-run Pi coding agent
 - Shared behavior in `SYSTEM.md`
 - Model and tool configuration in `agents/agent.yaml`
-- Runtime metadata in `.introspection/<name>.yaml`
+- Runtime metadata in `.introspection/coding-agent.yaml`
 
 [Read the Recipes documentation →](https://docs.introspection.dev/recipes)
