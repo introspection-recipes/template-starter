@@ -3,3 +3,4 @@ path: .
 description: Customizable Pi coding agent
 runtime:
   llm_mode: managed
+  connectors: []

@@ -96,7 +96,7 @@ An MCP server is declared in the recipe, but where it points is decided by a *bi
    ```
 
 3. **Bind it** where the recipe runs:
-   - **In the cloud**, connect the server to the runtime in the Introspection app; add the connector to `runtime.connectors` in `.introspection/coding-agent.yaml` if the runtime needs one. Credentials stay with the platform and are injected at egress.
+   - **In the cloud**, add the connector to `runtime.connectors` in `.introspection/coding-agent.yaml` (empty in the template), then connect it to the runtime in the Introspection app. Credentials stay with the platform and are injected at egress.
    - **Locally**, keep a personal binding file outside the repository and point `PI_RECIPES_MCP_LOCAL_CONFIG` at it.
    - **For evaluations**, list fakes in `.pi/mcp.local.json`, as below.
 
@@ -114,6 +114,6 @@ An MCP server is declared in the recipe, but where it points is decided by a *bi
 - Shared behavior in `SYSTEM.md`
 - Model and tool configuration in `agents/agent.yaml`
 - Runtime metadata in `.introspection/coding-agent.yaml`
-- Empty MCP declarations in `package.json`, `agents/agent.yaml` and `.pi/mcp.local.json`, ready to fill
+- Empty MCP declarations in `package.json`, `agents/agent.yaml` and `.pi/mcp.local.json`, and an empty `runtime.connectors` list, ready to fill
 
 [Read the Recipes documentation →](https://docs.introspection.dev/recipes)
