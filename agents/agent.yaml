@@ -8,5 +8,8 @@ tools:
   - bash
   - edit
   - write
+mcp:
+  mode: tools
+  servers: {}
 skills: []
 subagents: []

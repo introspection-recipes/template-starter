@@ -4,10 +4,10 @@
 .pi/mcporter.json
 .introspection/local.json
 
-# `.pi/mcp.local.json` is deliberately not ignored: commit it only as an eval
-# binding of loopback URLs, which `introspection check` enforces. Keep a
+# `.pi/mcp.local.json` is deliberately not ignored: it holds evaluation
+# bindings of loopback URLs only, which `introspection check` enforces. Keep a
 # personal binding outside the repository and point PI_RECIPES_MCP_LOCAL_CONFIG
-# at it.
+# at it (see README, "Add an MCP server").
 
 # Dependencies
 node_modules/

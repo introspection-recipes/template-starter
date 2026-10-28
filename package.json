@@ -20,6 +20,9 @@
   "pi": {
     "agents": [
       "./agents/*.yaml"
-    ]
+    ],
+    "mcp": {
+      "servers": []
+    }
   }
 }
