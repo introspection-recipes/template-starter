@@ -11,3 +11,6 @@ node_modules/
 # and un-ignored here travels to the cloud inside the development patch.
 .env
 .env.*
+
+# Eval run output from `introspection eval run`
+eval-runs/
