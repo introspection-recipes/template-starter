@@ -1,0 +1,13 @@
+# Keeps pnpm-lock.yaml current. A Recipe installs with `--frozen-lockfile`, so
+# the committed lockfile decides the versions a runtime actually gets; without
+# this it pins whatever was current the day the dependency was added.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      introspection:
+        patterns:
+          - "@introspection-ai/*"
