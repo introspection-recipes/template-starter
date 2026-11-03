@@ -76,6 +76,6 @@ Use production conversations and recurring patterns to choose the smallest usefu
 - Shared behavior in `SYSTEM.md`
 - Model and tool configuration in `agents/agent.yaml`
 - Runtime metadata in `.introspection/coding-agent.yaml`
-- A place for evals in `evals/`, starting with `evals/vitest/` (see its [README](evals/vitest/README.md)); `.recipeignore` keeps them out of the deployed recipe
+- `.recipeignore`, which keeps evals (`evals/`, when you add them) out of the deployed recipe
 
 [Read the Recipes documentation →](https://docs.introspection.dev/recipes)
