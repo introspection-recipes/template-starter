@@ -75,7 +75,7 @@ Use production conversations and recurring patterns to choose the smallest usefu
 - A ready-to-run Pi coding agent
 - Shared behavior in `SYSTEM.md`
 - Model and tool configuration in `agents/agent.yaml`
-- Conversation starters in `prompts/`: Pi prompt templates (listed in `package.json` under `pi.prompts`) offered when a new conversation opens, in Pi and as chips in the Introspection chat. Replace them with two to four requests of no more than 10 words that your agent handles; each also works as `/<name>`
+- Conversation starters in `prompts/`: Pi prompt templates (listed in `package.json` under `pi.prompts`) offered when a new conversation opens, in Pi and as chips in the Introspection chat, when their frontmatter has `suggest: true`. Replace them with two to four requests of no more than 10 words that your agent handles; each also works as `/<name>`
 - Runtime metadata in `.introspection/coding-agent.yaml`
 - `.recipeignore`, which keeps evals (`evals/`, when you add them) out of the deployed recipe
 
