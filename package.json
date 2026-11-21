@@ -24,5 +24,10 @@
     "prompts": [
       "./prompts/*.md"
     ]
+  },
+  "devDependencies": {
+    "@introspection-ai/vitest-evals": ">=0.13.0",
+    "vitest": "^4.1.12",
+    "vitest-evals": "^0.17.0"
   }
 }
