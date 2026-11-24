@@ -1,4 +1,8 @@
 #!/usr/bin/env sh
 set -eu
 
-npx -y -p @introspection-ai/cli introspection check
+if command -v introspection >/dev/null 2>&1; then
+  introspection check
+else
+  npx -y -p @introspection-ai/cli introspection check
+fi
