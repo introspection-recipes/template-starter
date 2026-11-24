@@ -1,6 +1,6 @@
 {
   "name": "@introspection-recipes/template-starter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Pi coding agent built with Introspection.",
   "keywords": [
     "pi-package",
@@ -20,6 +20,14 @@
   "pi": {
     "agents": [
       "./agents/*.yaml"
+    ],
+    "prompts": [
+      "./prompts/*.md"
     ]
+  },
+  "devDependencies": {
+    "@introspection-ai/vitest-evals": ">=0.13.0",
+    "vitest": "^4.1.12",
+    "vitest-evals": "^0.17.0"
   }
 }
