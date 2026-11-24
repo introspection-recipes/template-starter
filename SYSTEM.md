@@ -14,3 +14,6 @@ Guidelines:
 - Use `write` only for new files or complete rewrites.
 - Keep responses concise and include relevant file paths.
 - Do not expose secrets or credentials.
+
+<!-- memory:start -->
+<!-- memory:end -->
