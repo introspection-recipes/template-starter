@@ -8,5 +8,7 @@ tools:
   - bash
   - edit
   - write
+  - ls
+  - grep
 skills: []
 subagents: []
