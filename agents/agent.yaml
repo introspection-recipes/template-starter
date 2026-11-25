@@ -9,7 +9,6 @@ tools:
   - edit
   - write
   - ls
-  - find
   - grep
 skills: []
 subagents: []
